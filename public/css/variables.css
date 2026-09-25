@@ -1,0 +1,21 @@
+:root {
+    /* COLORES */
+    --background: #d8ccb9;
+    --paper: #efe4cf;
+    --paper-dark: #e2d4bb;
+    --primary: #8a6f56;
+    --primary-dark: #5f4a38;
+    --text: #4e4034;
+    --text-light: #7a6857;
+    --border: #cdb99f;
+    --green: #8a9272;
+    --shadow: rgba(60, 42, 25, 0.16);
+    /* FUENTES */
+    --font-main: "Quicksand", sans-serif;
+    --font-hand: "Patrick Hand", cursive;
+    --font-title: "Caveat", cursive;
+    /* CUADERNO */
+    --line-height: 34px;
+    --page-padding-top: 40px;
+    --page-padding-bottom: 40px;
+}

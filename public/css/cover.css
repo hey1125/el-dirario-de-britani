@@ -1,0 +1,77 @@
+/* ========================================
+   PORTADA
+======================================== */
+
+.home {
+    text-align: center;
+}
+
+.home-decoration {
+    font-size: 35px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.home-title {
+    font-family: var(--font-title);
+    font-size: 42px;
+    color: var(--primary-dark);
+}
+
+.home-subtitle {
+    font-family: var(--font-hand);
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   DIBUJO DE BRITANI
+======================================== */
+
+.britani-image {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto 25px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    mix-blend-mode: multiply;
+    opacity: 0.96;
+    filter: sepia(0.12) saturate(0.85) contrast(0.95);
+    transform: rotate(-2deg);
+}
+
+
+/* ========================================
+   PRESENTACIÓN
+======================================== */
+
+.home-description {
+    font-family: var(--font-hand);
+    font-size: 19px;
+    line-height: var(--line-height);
+    max-width: 620px;
+    margin: auto;
+}
+
+.page-hint {
+    margin-top: 18px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+.home-note {
+    display: inline-block;
+    background: #ffe7b8;
+    transform: rotate(2deg);
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-family: var(--font-title);
+    font-size: 23px;
+    box-shadow: 3px 4px 8px var(--shadow);
+}

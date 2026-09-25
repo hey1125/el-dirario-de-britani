@@ -1,0 +1,152 @@
+/* ========================================
+   TÍTULOS DE SECCIÓN
+======================================== */
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 42px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.section-description {
+    font-family: var(--font-hand);
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   PERSONAJES
+======================================== */
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+}
+
+.character {
+    background: #f0e4d1;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.character:hover {
+    transform: rotate(-1deg) translateY(-4px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.character-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 10px;
+}
+
+.character-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: #e4d0c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: var(--primary-dark);
+}
+
+.character-name {
+    font-family: var(--font-title);
+    font-size: 35px;
+    color: var(--primary-dark);
+}
+
+.character-opinion {
+    font-family: var(--font-hand);
+    font-size: 20px;
+    margin: 15px 0;
+    min-height: 75px;
+    white-space: pre-line;
+}
+
+
+/* ========================================
+   RELACIONES
+======================================== */
+
+.relationship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-hand);
+    margin-bottom: 10px;
+}
+
+.relationship-value {
+    font-weight: bold;
+    font-size: 23px;
+    color: var(--primary-dark);
+}
+
+.relationship-bar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+}
+
+.relationship-point {
+    height: 13px;
+    background: #e9d8d2;
+    border-radius: 4px;
+}
+
+.relationship-point.filled {
+    background: var(--primary);
+}
+
+.relationship-label {
+    margin-top: 12px;
+    font-family: var(--font-hand);
+    font-size: 18px;
+    color: var(--primary-dark);
+}
+
+
+/* ========================================
+   ESTADOS VACÍOS
+======================================== */
+
+.empty-message {
+    padding: 35px;
+    text-align: center;
+    border: 2px dashed var(--border);
+    border-radius: 15px;
+    font-family: var(--font-hand);
+    font-size: 23px;
+}
+
+
+/* ========================================
+   EMOTES DE BRITANI
+======================================== */
+
+.character-emote {
+    display: block;
+    width: 130px;
+    height: 130px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}

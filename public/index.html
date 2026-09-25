@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        El diario de Britani
+    </title>
+
+
+    <!-- FUENTES -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./css/variables.css">
+
+    <link rel="stylesheet" href="./css/general.css">
+
+    <link rel="stylesheet" href="./css/notebook.css">
+
+    <link rel="stylesheet" href="./css/cover.css">
+
+    <link rel="stylesheet" href="./css/entries.css">
+
+    <link rel="stylesheet" href="./css/characters.css">
+
+    <link rel="stylesheet" href="./css/editor.css">
+
+    <link rel="stylesheet" href="./css/responsive.css">
+
+
+    <!-- JAVASCRIPT -->
+
+    <script type="module" src="./js/main.js"></script>
+
+</head>
+
+
+<body data-era="child">
+
+    <div class="app">
+
+
+        <!-- ====================================
+             CABECERA
+        ==================================== -->
+
+        <header class="header">
+
+            <div class="header-brand">
+
+                <span class="header-icon">
+                    ✿
+                </span>
+
+                <div>
+
+                    <h1>
+                        El diario de Britani
+                    </h1>
+
+                    <p>
+                        ¡Mis aventuras y todas las cosas que no quiero olvidar!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-age">
+
+                <span>✦</span> 11 años
+
+            </div>
+
+        </header>
+
+
+        <!-- ====================================
+             NAVEGACIÓN
+        ==================================== -->
+
+        <nav class="navigation" aria-label="Secciones del diario">
+
+            <button class="nav-button active" data-page="diary" type="button">
+                ♡ Diario
+            </button>
+
+
+            <button class="nav-button" data-page="relationships" type="button">
+                ☆ Mis compañeros
+            </button>
+
+        </nav>
+
+
+        <!-- ====================================
+             ADMINISTRACIÓN
+        ==================================== -->
+
+        <div class="editor-toolbar">
+
+            <button id="toggle-editor" class="page-button" type="button">
+                ✎ Administrar diario
+            </button>
+
+        </div>
+
+
+        <section id="editor-panel" class="editor-panel" hidden>
+
+            <h2>
+                Mi rincón secreto ♡
+            </h2>
+
+
+            <!-- INICIAR SESIÓN -->
+
+            <form id="login-form" hidden>
+
+                <label for="admin-password">
+                    Contraseña de administrador
+                </label>
+
+                <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+
+                <button class="page-button" type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+
+            <!-- CONTENIDO PROTEGIDO -->
+
+            <div id="admin-content" hidden>
+
+
+                <!-- CABECERA ADMIN -->
+
+                <div class="admin-toolbar">
+
+                    <h3 id="editor-heading">
+                        Una nueva aventura
+                    </h3>
+
+                    <button id="logout-button" class="page-button" type="button">
+                        Cerrar sesión
+                    </button>
+
+                </div>
+
+
+                <!-- ====================================
+                     EDITOR DE AVENTURAS
+                ==================================== -->
+
+                <form id="entry-form">
+
+                    <label for="entry-title">
+                        Título
+                    </label>
+
+                    <input id="entry-title" name="title" maxlength="100" required>
+
+
+                    <label for="entry-session">
+                        Sesión
+                    </label>
+
+                    <input id="entry-session" name="session" type="number" min="0" step="1" required>
+
+
+                    <label for="entry-date">
+                        Fecha o momento
+                    </label>
+
+                    <input id="entry-date" name="date" maxlength="100" required>
+
+
+                    <label for="entry-content">
+                        Lo que escribió Britani
+                    </label>
+
+                    <textarea id="entry-content" name="content" rows="10" required></textarea>
+
+
+                    <label for="entry-note">
+                        Nota final
+                    </label>
+
+                    <input id="entry-note" name="note" maxlength="500">
+
+
+                    <label class="publish-option">
+
+                        <input
+                            id="entry-published"
+                            name="published"
+                            type="checkbox"
+                        >
+
+                        Publicar para mis compañeros
+
+                    </label>
+
+
+                    <div class="editor-actions">
+
+                        <button id="cancel-edit" class="page-button" type="button" hidden>
+                            Cancelar edición
+                        </button>
+
+                        <button id="save-entry" class="page-button" type="submit">
+                            Guardar aventura ♡
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- AVENTURAS GUARDADAS -->
+
+                <div class="admin-entries">
+
+                    <h3>
+                        Mis aventuras guardadas
+                    </h3>
+
+                    <div id="admin-entry-list"></div>
+
+                </div>
+
+
+                <!-- ====================================
+                     EDITOR DE COMPAÑEROS
+                ==================================== -->
+
+                <section class="characters-admin">
+
+                    <h2>
+                        Mis compañeros ♡
+                    </h2>
+
+                    <p class="characters-admin-description">
+
+                        Aquí puedo escribir lo que pienso de las personas que voy conociendo.
+
+                    </p>
+
+
+
+                    <form id="character-form">
+
+                        <h3 id="character-editor-heading">
+                            Un nuevo compañero
+                        </h3>
+
+                        <!-- NOMBRE -->
+
+                        <label for="character-name">
+        Nombre
+    </label>
+
+                        <input id="character-name" name="name" maxlength="100" required placeholder="Nombre del personaje">
+
+
+                        <!-- OPINIÓN -->
+
+                        <label for="character-opinion">
+        ¿Qué piensa Britani?
+    </label>
+
+                        <textarea id="character-opinion" name="opinion" rows="5" maxlength="5000" placeholder="Lo que pienso de esta persona..."></textarea>
+
+
+                        <!-- RELACIÓN -->
+
+                        <label for="character-relationship">
+        Nuestra relación
+    </label>
+
+                        <input id="character-relationship" name="relationship" type="number" step="1" value="0" required>
+
+                        <p class="form-hint">
+                            Puede ser negativa o superar 10. Al llegar a 10 se desbloquea el rasgo especial, pero la relación puede seguir aumentando.
+                        </p>
+
+
+                        <!-- NOMBRE PERSONALIZADO -->
+
+                        <label for="character-relationship-label">
+        Nombre personalizado del vínculo
+        (opcional)
+    </label>
+
+                        <input id="character-relationship-label" name="relationshipLabelOverride" maxlength="80" placeholder="Ejemplo: Mamá, Mi mejor amigo...">
+
+                        <p class="form-hint">
+                            Si lo dejás vacío, se mostrará el nombre correspondiente al nivel de relación.
+                        </p>
+
+
+                        <!-- EMOTE ESPECIAL -->
+
+                        <label for="character-special-emote">
+                            Emote especial (opcional)
+                        </label>
+
+                        <select id="character-special-emote" name="specialEmote">
+                <option value="">
+                    Automático según la relación
+                </option>
+
+                <option value="./images/emotes/seraphine.png">
+                    Britani y Seraphine ♡
+                </option>
+            </select>
+
+
+                        <!-- VISTA PREVIA -->
+
+                        <div class="character-emote-preview">
+
+                            <p>
+                                Así se verá Britani ♡
+                            </p>
+
+                            <img id="character-emote-preview" src="./images/emotes/baja.png" alt="Vista previa del emote de Britani">
+
+                        </div>
+
+
+                        <!-- PUBLICAR -->
+
+                        <label class="publish-option">
+
+        <input
+            id="character-published"
+            name="published"
+            type="checkbox"
+        >
+
+        Mostrar a mis compañeros
+
+    </label>
+
+
+                        <!-- BOTONES -->
+
+                        <div class="editor-actions">
+
+                            <button id="cancel-character-edit" class="page-button" type="button" hidden>
+            Cancelar edición
+        </button>
+
+                            <button id="save-character" class="page-button" type="submit">
+            Guardar compañero ♡
+        </button>
+
+                        </div>
+
+                    </form>
+
+
+
+                    <!-- COMPAÑEROS GUARDADOS -->
+
+                    <div class="admin-entries">
+
+                        <h3>
+                            Personas que conozco
+                        </h3>
+
+                        <div id="admin-character-list"></div>
+
+                    </div>
+
+
+                    <p id="character-message" class="admin-message" role="status" aria-live="polite"></p>
+
+                </section>
+
+            </div>
+
+
+            <!-- MENSAJES DEL ADMIN -->
+
+            <p id="admin-message" class="admin-message" role="status" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- ====================================
+             CUADERNO
+        ==================================== -->
+
+        <main class="book">
+
+            <div class="book-binding"></div>
+
+            <div class="book-content">
+
+                <div id="page-content"></div>
+
+            </div>
+
+
+            <!-- PASAR HOJAS -->
+
+            <div class="page-controls" id="page-controls">
+
+                <button id="prev-page" class="page-button" type="button">
+                    ← Anterior
+                </button>
+
+                <span id="page-indicator" class="page-indicator">
+                    Página 1 / 1
+                </span>
+
+                <button id="next-page" class="page-button" type="button">
+                    Siguiente →
+                </button>
+
+            </div>
+
+
+            <!-- PIE DEL CUADERNO -->
+
+            <div class="book-footer">
+
+                <span>
+                    Hecho con mucho cariño ♡
+                </span>
+
+                <span>
+                    El diario de Britani
+                </span>
+
+            </div>
+
+        </main>
+
+
+        <!-- ====================================
+             FOOTER
+        ==================================== -->
+
+        <footer class="footer">
+
+            Un pequeño rincón de Eberron
+
+            <span>✿</span> ¡Gracias por leer mi diario!
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

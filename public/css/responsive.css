@@ -1,0 +1,75 @@
+/* ========================================
+   PANTALLAS PEQUEÑAS
+======================================== */
+
+@media (max-width: 700px) {
+    .app {
+        padding: 20px 10px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-brand {
+        flex-direction: column;
+    }
+    .header h1 {
+        font-size: 42px;
+    }
+    .navigation {
+        gap: 6px;
+    }
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    /* CUADERNO */
+    .book-content {
+        --page-padding-top: 30px;
+        --page-padding-bottom: 35px;
+        padding-right: 25px;
+        padding-left: 45px;
+    }
+    .book-content:not(.is-cover):not(.is-relationships) {
+        --line-count: 28;
+    }
+    .book-content.measurement-sheet {
+        --line-count: 28;
+    }
+    /* PORTADA */
+    .home-title {
+        font-size: 42px;
+    }
+    .home-subtitle {
+        font-size: 21px;
+    }
+    .britani-image {
+        width: 500px;
+        max-width: 100%;
+    }
+    .home-description {
+        font-size: 19px;
+    }
+    /* AVENTURAS */
+    .diary-entry .entry-title {
+        font-size: 31px;
+    }
+    .diary-entry .entry-content {
+        font-size: 19px;
+    }
+    /* CONTROLES */
+    .page-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 20px 12px 43px;
+    }
+    .page-button {
+        font-size: 16px;
+    }
+    .page-indicator {
+        font-size: 17px;
+    }
+    .book-footer {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,93 @@
+/* ========================================
+   CONTENEDOR DE AVENTURAS
+======================================== */
+
+.diary-sheet-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.diary-entry {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ========================================
+   ESPACIO ENTRE AVENTURAS
+======================================== */
+
+.diary-entry+.diary-entry {
+    margin-top: var(--line-height);
+}
+
+
+/* ========================================
+   FECHA
+======================================== */
+
+.diary-entry .entry-date {
+    font-family: var(--font-hand);
+    font-size: 17px;
+    line-height: var(--line-height);
+    color: var(--text-light);
+    margin: 0;
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.diary-entry .entry-title {
+    font-family: var(--font-title);
+    font-size: 36px;
+    line-height: var(--line-height);
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+
+/* ========================================
+   CONTINUACIÓN
+======================================== */
+
+.diary-entry .entry-part {
+    font-family: var(--font-hand);
+    font-size: 17px;
+    line-height: var(--line-height);
+    color: var(--text-light);
+    margin: 0;
+}
+
+
+/* ========================================
+   TEXTO DE BRITANI
+======================================== */
+
+.diary-entry .entry-content {
+    font-family: var(--font-hand);
+    font-size: 19px;
+    line-height: var(--line-height);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+
+/* ========================================
+   NOTAS
+======================================== */
+
+.diary-entry .entry-note {
+    font-family: var(--font-title);
+    font-size: 25px;
+    line-height: var(--line-height);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: var(--primary-dark);
+    margin: 0;
+    padding: 0;
+    border: none;
+}

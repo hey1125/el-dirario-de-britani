@@ -1,0 +1,400 @@
+/* ========================================
+   BOTÓN DE ADMINISTRACIÓN
+======================================== */
+
+.editor-toolbar {
+    width: 100%;
+    margin: 0 auto 15px;
+    text-align: left;
+}
+
+
+/* ========================================
+   PANEL PRINCIPAL
+======================================== */
+
+.editor-panel {
+    width: 100%;
+    margin: 0 auto 28px;
+    padding: 28px;
+    background: #f5ebda;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px var(--shadow);
+}
+
+.editor-panel h2 {
+    font-family: var(--font-title);
+    font-size: 38px;
+    color: var(--primary-dark);
+    margin: 0 0 22px;
+}
+
+
+/* ========================================
+   INICIO DE SESIÓN
+======================================== */
+
+#login-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+#login-form label {
+    font-family: var(--font-hand);
+    font-size: 20px;
+}
+
+#login-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 15px;
+    background: #fffaf0;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+}
+
+#login-form button {
+    justify-self: end;
+}
+
+
+/* ========================================
+   CABECERA ADMIN
+======================================== */
+
+.admin-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.admin-toolbar h3,
+.admin-entries h3 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 32px;
+    color: var(--primary-dark);
+}
+
+
+/* ========================================
+   FORMULARIO DE AVENTURAS
+======================================== */
+
+.editor-panel #entry-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+#entry-form>label:not(.publish-option) {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-hand);
+    font-size: 21px;
+    color: var(--primary-dark);
+}
+
+#entry-form input:not([type="checkbox"]),
+#entry-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 15px;
+    background: #fffaf0;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+}
+
+#entry-form textarea {
+    min-height: 220px;
+    line-height: var(--line-height);
+    resize: vertical;
+}
+
+
+/* ========================================
+   CAMPOS ACTIVOS
+======================================== */
+
+#entry-form input:focus,
+#entry-form textarea:focus,
+#character-form input:focus,
+#character-form textarea:focus,
+#login-form input:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   PUBLICACIÓN
+======================================== */
+
+.publish-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    font-family: var(--font-hand);
+    font-size: 21px;
+    color: var(--primary-dark);
+    cursor: pointer;
+}
+
+#entry-form .publish-option input,
+#character-form .publish-option input {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    accent-color: var(--primary);
+}
+
+
+/* ========================================
+   BOTONES DE FORMULARIO
+======================================== */
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+
+/* ========================================
+   LISTAS ADMINISTRATIVAS
+======================================== */
+
+.admin-entries {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border);
+}
+
+.admin-entries h3 {
+    margin-bottom: 12px;
+}
+
+.admin-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.admin-entry strong {
+    font-family: var(--font-hand);
+    font-size: 23px;
+    color: var(--primary-dark);
+}
+
+.admin-entry p {
+    margin: 6px 0;
+    font-family: var(--font-hand);
+    font-size: 18px;
+}
+
+.entry-status {
+    display: inline-block;
+    font-family: var(--font-hand);
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.admin-entry-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* ========================================
+   MENSAJES
+======================================== */
+
+.admin-message {
+    margin-top: 18px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+    color: var(--primary-dark);
+}
+
+
+/* ========================================
+   ADMINISTRACIÓN DE COMPAÑEROS
+======================================== */
+
+.characters-admin {
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 2px dashed var(--border);
+}
+
+.characters-admin h2 {
+    margin-bottom: 5px;
+    font-family: var(--font-title);
+    font-size: 40px;
+    color: var(--primary-dark);
+}
+
+.characters-admin-description {
+    margin-bottom: 25px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   FORMULARIO DE COMPAÑEROS
+======================================== */
+
+#character-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+#character-form h3 {
+    margin-bottom: 10px;
+    font-family: var(--font-title);
+    font-size: 32px;
+    color: var(--primary-dark);
+}
+
+#character-form>label:not(.publish-option) {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-hand);
+    font-size: 21px;
+    color: var(--primary-dark);
+}
+
+#character-form input:not([type="checkbox"]),
+#character-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 15px;
+    background: #fffaf0;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+}
+
+#character-form textarea {
+    min-height: 150px;
+    line-height: var(--line-height);
+    resize: vertical;
+}
+
+
+/* ========================================
+   AYUDA DEL FORMULARIO
+======================================== */
+
+.form-hint {
+    font-family: var(--font-hand);
+    font-size: 17px;
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   PANTALLAS PEQUEÑAS
+======================================== */
+
+@media (max-width: 700px) {
+    .editor-panel {
+        padding: 18px;
+    }
+    .admin-toolbar,
+    .admin-entry {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .admin-entry-actions {
+        justify-content: flex-start;
+    }
+    .editor-actions {
+        justify-content: stretch;
+    }
+    .editor-actions button {
+        flex: 1;
+    }
+    #entry-form textarea {
+        min-height: 180px;
+    }
+    #character-form textarea {
+        min-height: 150px;
+    }
+}
+
+
+/* ========================================
+   SELECTOR DE EMOTES
+======================================== */
+
+#character-form select {
+    width: 100%;
+    padding: 12px 15px;
+    background: #fffaf0;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: var(--font-hand);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   VISTA PREVIA DEL EMOTE
+======================================== */
+
+.character-emote-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 20px;
+    background: #efe4d1;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+}
+
+.character-emote-preview p {
+    font-family: var(--font-title);
+    font-size: 29px;
+    color: var(--primary-dark);
+}
+
+.character-emote-preview img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border: none;
+    background: transparent;
+}
